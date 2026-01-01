@@ -12,7 +12,7 @@ export default function AboutSection() {
               <img
                 src={aboutImage}
                 alt="The owners of The Mixer Cafe"
-                className="w-full h-auto object-contain bg-background"
+                className="w-full h-auto object-cover object-top aspect-[4/3]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent mix-blend-multiply" />
             </div>
