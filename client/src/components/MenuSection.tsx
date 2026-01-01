@@ -2,36 +2,27 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion";
+import menuData from "../data/menu.json";
 
-const menuItems = {
-  brazilian: [
-    { name: "Pão de Queijo", description: "Traditional cheese bread made with cassava flour.", price: "$6.50", popular: true },
-    { name: "Coxinha", description: "Shredded chicken meat covered in dough, molded into a shape resembling a drumstick.", price: "$8.00", popular: true },
-    { name: "Brigadeiro", description: "Rich chocolate truffle bonbon.", price: "$3.50", popular: false },
-    { name: "Açaí Bowl", description: "Pure organic açaí topped with granola, banana, and honey.", price: "$12.00", popular: false },
-  ],
-  turkish: [
-    { name: "Simit", description: "Circular bread, typically encrusted with sesame seeds.", price: "$4.50", popular: false },
-    { name: "Börek", description: "Baked filled pastries made of a thin flaky dough.", price: "$7.00", popular: true },
-    { name: "Baklava", description: "Rich, sweet dessert pastry made of layers of filo filled with chopped nuts.", price: "$5.50", popular: true },
-    { name: "Turkish Delight", description: "Confection based on gel of starch and sugar.", price: "$4.00", popular: false },
-  ],
-  french: [
-    { name: "Butter Croissant", description: "Classic flaky, buttery pastry.", price: "$4.50", popular: true },
-    { name: "Pain au Chocolat", description: "Sweet roll with chocolate filling.", price: "$5.00", popular: true },
-    { name: "Quiche Lorraine", description: "Savoury tart with cheese and bacon lardons.", price: "$9.50", popular: false },
-    { name: "Macarons", description: "Assorted flavors of delicate meringue-based cookies.", price: "$3.00/ea", popular: false },
-  ],
-  beverages: [
-    { name: "Turkish Coffee", description: "Unfiltered coffee roasted and then finely ground.", price: "$4.50", popular: true },
-    { name: "Brazilian Roast", description: "Medium roast with notes of chocolate and nut.", price: "$3.50", popular: false },
-    { name: "Café au Lait", description: "Coffee with hot milk.", price: "$4.00", popular: false },
-    { name: "Ayran", description: "Cold savory yogurt-based beverage.", price: "$4.00", popular: false },
-  ]
+// Type definition for Menu Item
+type MenuItem = {
+  name: string;
+  description: string;
+  price: string;
+  popular: boolean;
 };
 
-const MenuItem = ({ item }: { item: any }) => (
+// Type definition for Menu Data
+type MenuData = {
+  brazilian: MenuItem[];
+  turkish: MenuItem[];
+  french: MenuItem[];
+  beverages: MenuItem[];
+};
+
+const menuItems: MenuData = menuData;
+
+const MenuItem = ({ item }: { item: MenuItem }) => (
   <Card className="border-none shadow-none bg-white/50 hover:bg-white transition-colors duration-300 group">
     <CardHeader className="flex flex-row items-baseline justify-between p-4 pb-2">
       <div className="flex items-center gap-2">
