@@ -53,7 +53,7 @@ export default function AboutSection() {
                   <p className="text-sm text-muted-foreground">Our Home & Community</p>
                 </div>
                 <div>
-                  <h4 className="font-serif text-xl font-bold text-primary mb-1">Est. 2024</h4>
+                  <h4 className="font-serif text-xl font-bold text-primary mb-1">Est. 2025</h4>
                   <p className="text-sm text-muted-foreground">Serving with Love</p>
                 </div>
               </div>

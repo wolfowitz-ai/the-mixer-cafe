@@ -73,8 +73,8 @@ export default function MenuSection() {
         </div>
 
         <Tabs defaultValue="brazilian" className="w-full max-w-4xl mx-auto">
-          <div className="flex justify-center mb-10 overflow-x-auto pb-2">
-            <TabsList className="bg-transparent h-auto gap-4">
+          <div className="flex justify-start md:justify-center mb-10 overflow-x-auto pb-2 no-scrollbar px-2">
+            <TabsList className="bg-transparent h-auto gap-4 flex-nowrap">
               <TabsTrigger 
                 value="brazilian" 
                 className="rounded-full px-6 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
