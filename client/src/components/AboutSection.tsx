@@ -32,11 +32,11 @@ export default function AboutSection() {
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
               <p>
                 The Mixer Cafe was born from a simple idea: that the best way to share love is through food. 
-                Founded by Maria and Leyla, two mothers who found themselves neighbors in Boynton Beach, 
+                Founded by Regina and Ayşe, two mothers who found themselves neighbors in Boynton Beach, 
                 our cafe is a celebration of our heritage.
               </p>
               <p>
-                Maria brings the vibrant, cheesy warmth of her Brazilian home, while Leyla infuses 
+                Regina brings the vibrant, cheesy warmth of her Brazilian home, while Ayşe infuses 
                 the menu with the aromatic spices and delicate pastries of her Turkish roots. 
                 Together, inspired by their shared love for French culinary techniques, they created a menu 
                 that knows no borders.
