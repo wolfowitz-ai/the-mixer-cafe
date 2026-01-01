@@ -8,7 +8,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image Side */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500">
               <img
                 src={aboutImage}
                 alt="The owners of The Mixer Cafe"
