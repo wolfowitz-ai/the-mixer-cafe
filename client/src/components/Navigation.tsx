@@ -34,33 +34,36 @@ export default function Navigation() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="#menu">
-            <a className={`transition-colors font-medium ${
+          <a 
+            href="#menu"
+            className={`transition-colors font-medium ${
               isScrolled 
                 ? "text-foreground/80 hover:text-primary" 
                 : "text-white/90 hover:text-white"
-            }`}>
-              Menu
-            </a>
-          </Link>
-          <Link href="#about">
-            <a className={`transition-colors font-medium ${
+            }`}
+          >
+            Menu
+          </a>
+          <a 
+            href="#about"
+            className={`transition-colors font-medium ${
               isScrolled 
                 ? "text-foreground/80 hover:text-primary" 
                 : "text-white/90 hover:text-white"
-            }`}>
-              Our Story
-            </a>
-          </Link>
-          <Link href="#contact">
-            <a className={`transition-colors font-medium ${
+            }`}
+          >
+            Our Story
+          </a>
+          <a 
+            href="#contact"
+            className={`transition-colors font-medium ${
               isScrolled 
                 ? "text-foreground/80 hover:text-primary" 
                 : "text-white/90 hover:text-white"
-            }`}>
-              Visit Us
-            </a>
-          </Link>
+            }`}
+          >
+            Visit Us
+          </a>
           <Button 
             className={`font-semibold px-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 ${
               isScrolled
@@ -85,30 +88,27 @@ export default function Navigation() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-4 flex flex-col gap-4 shadow-xl animate-in slide-in-from-top-5">
-          <Link href="#menu">
-            <a 
-              className="text-lg font-medium text-foreground py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Menu
-            </a>
-          </Link>
-          <Link href="#about">
-            <a 
-              className="text-lg font-medium text-foreground py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Our Story
-            </a>
-          </Link>
-          <Link href="#contact">
-            <a 
-              className="text-lg font-medium text-foreground py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Visit Us
-            </a>
-          </Link>
+          <a 
+            href="#menu"
+            className="text-lg font-medium text-foreground py-2"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Menu
+          </a>
+          <a 
+            href="#about"
+            className="text-lg font-medium text-foreground py-2"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Our Story
+          </a>
+          <a 
+            href="#contact"
+            className="text-lg font-medium text-foreground py-2"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Visit Us
+          </a>
           <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
             Order Online
           </Button>
