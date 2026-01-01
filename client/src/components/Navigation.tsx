@@ -25,30 +25,48 @@ export default function Navigation() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/">
-          <a className="font-serif text-2xl md:text-3xl font-bold text-primary tracking-tight">
-            The Mixer <span className="text-secondary">Cafe</span>
+          <a className={`font-serif text-2xl md:text-3xl font-bold tracking-tight transition-colors ${
+            isScrolled ? "text-primary" : "text-white"
+          }`}>
+            The Mixer <span className={isScrolled ? "text-secondary" : "text-secondary"}>Cafe</span>
           </a>
         </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           <Link href="#menu">
-            <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
+            <a className={`transition-colors font-medium ${
+              isScrolled 
+                ? "text-foreground/80 hover:text-primary" 
+                : "text-white/90 hover:text-white"
+            }`}>
               Menu
             </a>
           </Link>
           <Link href="#about">
-            <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
+            <a className={`transition-colors font-medium ${
+              isScrolled 
+                ? "text-foreground/80 hover:text-primary" 
+                : "text-white/90 hover:text-white"
+            }`}>
               Our Story
             </a>
           </Link>
           <Link href="#contact">
-            <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
+            <a className={`transition-colors font-medium ${
+              isScrolled 
+                ? "text-foreground/80 hover:text-primary" 
+                : "text-white/90 hover:text-white"
+            }`}>
               Visit Us
             </a>
           </Link>
           <Button 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+            className={`font-semibold px-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 ${
+              isScrolled
+                ? "bg-primary hover:bg-primary/90 text-primary-foreground"
+                : "bg-white hover:bg-white/90 text-primary"
+            }`}
           >
             <ShoppingBag className="w-4 h-4 mr-2" />
             Order Online
@@ -57,7 +75,7 @@ export default function Navigation() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-primary"
+          className={`md:hidden transition-colors ${isScrolled ? "text-primary" : "text-white"}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
