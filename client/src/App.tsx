@@ -16,6 +16,7 @@ function Router() {
 }
 
 function App() {
+  // Main app component
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
