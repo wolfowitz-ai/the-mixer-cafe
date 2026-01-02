@@ -62,18 +62,22 @@ export default function MenuSection() {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A carefully curated selection of our favorite recipes passed down through generations.
           </p>
-          <div className="mt-6 inline-block bg-secondary/10 border border-secondary/20 rounded-full px-6 py-2">
-            <p className="text-secondary-foreground font-medium text-sm flex items-center gap-2">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
-              </span>
-              Waffles are coming soon!
-            </p>
-          </div>
         </div>
 
-        <Tabs defaultValue="brazilian" className="w-full max-w-4xl mx-auto">
+        <Tabs 
+          defaultValue="brazilian" 
+          className="w-full max-w-4xl mx-auto" 
+          id="menu-tabs"
+          onValueChange={(value) => {
+            setActiveTab(value);
+            const tabsElement = document.getElementById('menu-tabs');
+            if (tabsElement) {
+              const yOffset = -100; // Offset to account for sticky header
+              const y = tabsElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({top: y, behavior: 'smooth'});
+            }
+          }}
+        >
           <div className="flex justify-center mb-10 pb-2 px-2">
             <TabsList className="bg-transparent h-auto gap-3 flex-wrap justify-center">
               <TabsTrigger 
