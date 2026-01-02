@@ -85,6 +85,7 @@ export default function Navigation() {
                 ? "bg-primary hover:bg-primary/90 text-primary-foreground"
                 : "bg-white hover:bg-white/90 text-primary"
             }`}
+            onClick={() => window.open('https://www.clover.com/online-ordering/the-mixer-cafe-boynton-beach', '_blank')}
           >
             <ShoppingBag className="w-4 h-4 mr-2" />
             Order Online
@@ -136,7 +137,10 @@ export default function Navigation() {
             Follow us on Instagram
           </a>
 
-          <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button 
+            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+            onClick={() => window.open('https://www.clover.com/online-ordering/the-mixer-cafe-boynton-beach', '_blank')}
+          >
             Order Online
           </Button>
         </div>
