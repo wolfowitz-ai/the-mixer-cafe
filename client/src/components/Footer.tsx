@@ -52,12 +52,12 @@ export default function Footer() {
             <h4 className="text-xl font-serif font-bold mb-6">Opening Hours</h4>
             <ul className="space-y-3 text-primary-foreground/80">
               <li className="flex justify-between md:justify-start md:gap-8 border-b border-white/10 pb-2">
-                <span>Mon - Fri</span>
-                <span>7:00 AM - 7:00 PM</span>
+                <span>Monday</span>
+                <span>Closed</span>
               </li>
               <li className="flex justify-between md:justify-start md:gap-8 border-b border-white/10 pb-2">
-                <span>Saturday</span>
-                <span>8:00 AM - 8:00 PM</span>
+                <span>Tue - Sat</span>
+                <span>7:00 AM - 3:00 PM</span>
               </li>
               <li className="flex justify-between md:justify-start md:gap-8 pb-2">
                 <span>Sunday</span>
