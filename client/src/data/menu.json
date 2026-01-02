@@ -14,25 +14,35 @@
     { "name": "Dear Benedict*", "description": "Two poached eggs, croissant, Hollandaise sauce, Canadian bacon.", "price": "$15.90", "popular": true },
     { "name": "Grand Luxe", "description": "Roasted Coffee, croissant, toast, bacon, two eggs, jam, butter and orange juice.", "price": "$14.50", "popular": false }
   ],
-  "american": [
-    { "name": "Ham & Cheese Sandwich", "description": "Ham, tomato, cheese, mayo, arugula multigrain bread.", "price": "$9.95", "popular": false },
-    { "name": "Caprese Sandwich", "description": "Multigrain bread, pesto, fresh mozzarella, tomatoes, arugula and balsamic glaze.", "price": "$11.45", "popular": false },
-    { "name": "Turkey Sandwich", "description": "Turkey breast, multigrain bread, olives paste, pesto, mozzarella or swiss cheese, tomato, arugula and balsamic glaze.", "price": "$14.95", "popular": true },
-    { "name": "Chicken Salad Sandwich", "description": "Multigrain bread, mayo, tomatoes, arugula.", "price": "$12.90", "popular": false },
-    { "name": "Cream Cheese Bagel", "description": "Plain, Everything or Sesame.", "price": "$4.95", "popular": false },
-    { "name": "Bacon Egg & Cheese Bagel", "description": "Plain, Everything or Sesame.", "price": "$11.95", "popular": true },
-    { "name": "Smoked Salmon Bagel*", "description": "Cream Cheese, tomato, onion and capers.", "price": "$12.95", "popular": true },
-    { "name": "Gourmet Waffle", "description": "Nutella.", "price": "$7.95", "popular": false },
-    { "name": "Double Waffle", "description": "Nutella and banana.", "price": "$8.95", "popular": false },
-    { "name": "Triple Waffle", "description": "Nutella, banana and strawberry.", "price": "$10.95", "popular": true },
-    { "name": "Plain Pancakes", "description": "Served as two pieces.", "price": "$5.95", "popular": false },
-    { "name": "Blueberries Pancakes", "description": "Served as two pieces.", "price": "$8.95", "popular": false },
-    { "name": "Banana Pancakes", "description": "Served as two pieces.", "price": "$8.95", "popular": false },
-    { "name": "Banana Nutella Pancakes", "description": "Served as two pieces.", "price": "$9.95", "popular": true },
-    { "name": "French Omelette", "description": "Cheese and green onions. Served with jelly and butter.", "price": "$8.90", "popular": false },
-    { "name": "Brazilian Omelette", "description": "Cheese, ham, tomatoes and green onions. Served with jelly and butter.", "price": "$13.50", "popular": true },
-    { "name": "Florentine Omelette", "description": "Cheese, spinach, mushrooms, tomatoes. Served with jelly and butter.", "price": "$14.50", "popular": false }
-  ],
+  "american": {
+    "Sandwiches": [
+      { "name": "Ham & Cheese", "description": "Ham, tomato, cheese, mayo, arugula multigrain bread.", "price": "$9.95", "popular": false },
+      { "name": "Caprese", "description": "Multigrain bread, pesto, fresh mozzarella, tomatoes, arugula and balsamic glaze.", "price": "$11.45", "popular": false },
+      { "name": "Turkey", "description": "Turkey breast, multigrain bread, olives paste, pesto, mozzarella or swiss cheese, tomato, arugula and balsamic glaze.", "price": "$14.95", "popular": true },
+      { "name": "Chicken Salad", "description": "Multigrain bread, mayo, tomatoes, arugula.", "price": "$12.90", "popular": false }
+    ],
+    "Bagel Sandwiches": [
+      { "name": "Cream Cheese", "description": "Plain, Everything or Sesame.", "price": "$4.95", "popular": false },
+      { "name": "Bacon Egg & Cheese", "description": "Plain, Everything or Sesame.", "price": "$11.95", "popular": true },
+      { "name": "Smoked Salmon*", "description": "Cream Cheese, tomato, onion and capers. Plain, Everything or Sesame.", "price": "$12.95", "popular": true }
+    ],
+    "Waffles": [
+      { "name": "Gourmet", "description": "Nutella.", "price": "$7.95", "popular": false },
+      { "name": "Double", "description": "Nutella and banana.", "price": "$8.95", "popular": false },
+      { "name": "Triple", "description": "Nutella, banana and strawberry.", "price": "$10.95", "popular": true }
+    ],
+    "Pancakes": [
+      { "name": "Plain", "description": "Served as two pieces.", "price": "$5.95", "popular": false },
+      { "name": "Blueberries", "description": "Served as two pieces.", "price": "$8.95", "popular": false },
+      { "name": "Banana", "description": "Served as two pieces.", "price": "$8.95", "popular": false },
+      { "name": "Banana Nutella", "description": "Served as two pieces.", "price": "$9.95", "popular": true }
+    ],
+    "Omelettes": [
+      { "name": "French", "description": "Cheese and green onions. Served with jelly and butter.", "price": "$8.90", "popular": false },
+      { "name": "Brazilian", "description": "Cheese, ham, tomatoes and green onions. Served with jelly and butter.", "price": "$13.50", "popular": true },
+      { "name": "Florentine", "description": "Cheese, spinach, mushrooms, tomatoes. Served with jelly and butter.", "price": "$14.50", "popular": false }
+    ]
+  },
   "beverages": [
     { "name": "Roasted Coffee", "description": "Hot Coffee", "price": "$2.95", "popular": false },
     { "name": "Espresso", "description": "Hot Coffee", "price": "$3.25", "popular": false },

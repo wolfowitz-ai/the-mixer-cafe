@@ -17,11 +17,11 @@ type MenuData = {
   brazilian: MenuItem[];
   turkish: MenuItem[];
   french: MenuItem[];
-  american: MenuItem[];
+  american: Record<string, MenuItem[]>;
   beverages: MenuItem[];
 };
 
-const menuItems: MenuData = menuData;
+const menuItems: MenuData = menuData as unknown as MenuData;
 
 const MenuItem = ({ item }: { item: MenuItem }) => (
   <Card className="border-none shadow-none bg-white/50 hover:bg-white transition-colors duration-300 group">
@@ -47,7 +47,20 @@ const MenuItem = ({ item }: { item: MenuItem }) => (
 );
 
 export default function MenuSection() {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeTab, setActiveTab] = useState("brazilian");
+
+  const handleTabChange = (value: string) => {
+    setActiveTab(value);
+    // Use setTimeout to allow DOM to update before scrolling
+    setTimeout(() => {
+      const tabsElement = document.getElementById('menu-tabs');
+      if (tabsElement) {
+        const yOffset = -80; // Adjusted offset
+        const y = tabsElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({top: y, behavior: 'instant'}); // Use instant to prevent jumpiness
+      }
+    }, 0);
+  };
 
   return (
     <section id="menu" className="py-20 bg-background relative overflow-hidden scroll-mt-24">
@@ -68,15 +81,8 @@ export default function MenuSection() {
           defaultValue="brazilian" 
           className="w-full max-w-4xl mx-auto" 
           id="menu-tabs"
-          onValueChange={(value) => {
-            setActiveTab(value);
-            const tabsElement = document.getElementById('menu-tabs');
-            if (tabsElement) {
-              const yOffset = -100; // Offset to account for sticky header
-              const y = tabsElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-              window.scrollTo({top: y, behavior: 'smooth'});
-            }
-          }}
+          onValueChange={handleTabChange}
+          value={activeTab}
         >
           <div className="flex justify-center mb-10 pb-2 px-2">
             <TabsList className="bg-transparent h-auto gap-3 flex-wrap justify-center">
@@ -113,7 +119,7 @@ export default function MenuSection() {
             </TabsList>
           </div>
 
-          <TabsContent value="brazilian" className="mt-0">
+          <TabsContent value="brazilian" className="mt-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {menuItems.brazilian.map((item, idx) => (
                 <MenuItem key={idx} item={item} />
@@ -121,7 +127,7 @@ export default function MenuSection() {
             </div>
           </TabsContent>
           
-          <TabsContent value="turkish" className="mt-0">
+          <TabsContent value="turkish" className="mt-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {menuItems.turkish.map((item, idx) => (
                 <MenuItem key={idx} item={item} />
@@ -129,7 +135,7 @@ export default function MenuSection() {
             </div>
           </TabsContent>
 
-          <TabsContent value="french" className="mt-0">
+          <TabsContent value="french" className="mt-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {menuItems.french.map((item, idx) => (
                 <MenuItem key={idx} item={item} />
@@ -137,15 +143,25 @@ export default function MenuSection() {
             </div>
           </TabsContent>
 
-          <TabsContent value="american" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {menuItems.american.map((item, idx) => (
-                <MenuItem key={idx} item={item} />
+          <TabsContent value="american" className="mt-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
+             <div className="space-y-10">
+              {Object.entries(menuItems.american).map(([category, items]) => (
+                <div key={category}>
+                  <div className="flex items-center gap-4 mb-6">
+                    <h3 className="text-2xl font-serif font-bold text-primary">{category}</h3>
+                    <div className="h-px bg-border flex-1" />
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {items.map((item, idx) => (
+                      <MenuItem key={idx} item={item} />
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </TabsContent>
 
-          <TabsContent value="beverages" className="mt-0">
+          <TabsContent value="beverages" className="mt-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {menuItems.beverages.map((item, idx) => (
                 <MenuItem key={idx} item={item} />
