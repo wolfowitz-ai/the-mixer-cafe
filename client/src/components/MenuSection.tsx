@@ -17,6 +17,7 @@ type MenuData = {
   brazilian: MenuItem[];
   turkish: MenuItem[];
   french: MenuItem[];
+  american: MenuItem[];
   beverages: MenuItem[];
 };
 
@@ -85,6 +86,12 @@ export default function MenuSection() {
                 French
               </TabsTrigger>
               <TabsTrigger 
+                value="american" 
+                className="rounded-full px-6 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
+              >
+                American
+              </TabsTrigger>
+              <TabsTrigger 
                 value="beverages" 
                 className="rounded-full px-6 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
               >
@@ -112,6 +119,14 @@ export default function MenuSection() {
           <TabsContent value="french" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {menuItems.french.map((item, idx) => (
+                <MenuItem key={idx} item={item} />
+              ))}
+            </div>
+          </TabsContent>
+
+          <TabsContent value="american" className="mt-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {menuItems.american.map((item, idx) => (
                 <MenuItem key={idx} item={item} />
               ))}
             </div>
