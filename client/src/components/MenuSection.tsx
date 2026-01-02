@@ -62,6 +62,15 @@ export default function MenuSection() {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A carefully curated selection of our favorite recipes passed down through generations.
           </p>
+          <div className="mt-6 inline-block bg-secondary/10 border border-secondary/20 rounded-full px-6 py-2">
+            <p className="text-secondary-foreground font-medium text-sm flex items-center gap-2">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+              </span>
+              Waffles are coming soon!
+            </p>
+          </div>
         </div>
 
         <Tabs defaultValue="brazilian" className="w-full max-w-4xl mx-auto">
@@ -89,7 +98,7 @@ export default function MenuSection() {
                 value="american" 
                 className="rounded-full px-6 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
               >
-                American
+                Cafe Classics
               </TabsTrigger>
               <TabsTrigger 
                 value="beverages" 
