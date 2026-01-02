@@ -14,7 +14,13 @@ export default function Footer() {
               Made with love by two mothers.
             </p>
             <div className="flex justify-center md:justify-start gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-colors">
+              <a 
+                href="https://www.instagram.com/themixercafe" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-colors"
+                aria-label="Follow us on Instagram"
+              >
                 <Instagram size={20} />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-colors">

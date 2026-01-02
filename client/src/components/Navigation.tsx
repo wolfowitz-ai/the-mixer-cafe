@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { Menu, X, ShoppingBag } from "lucide-react";
+import { Menu, X, ShoppingBag, Instagram } from "lucide-react";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,6 +64,21 @@ export default function Navigation() {
           >
             Visit Us
           </a>
+
+          <a
+            href="https://www.instagram.com/themixercafe"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`transition-colors font-medium hover:scale-110 transform duration-200 ${
+              isScrolled 
+                ? "text-foreground/80 hover:text-primary" 
+                : "text-white/90 hover:text-white"
+            }`}
+            aria-label="Follow us on Instagram"
+          >
+            <Instagram size={22} />
+          </a>
+
           <Button 
             className={`font-semibold px-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 ${
               isScrolled
@@ -109,6 +124,18 @@ export default function Navigation() {
           >
             Visit Us
           </a>
+          
+          <a 
+            href="https://www.instagram.com/themixercafe"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg font-medium text-foreground py-2 flex items-center gap-2"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <Instagram size={20} />
+            Follow us on Instagram
+          </a>
+
           <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
             Order Online
           </Button>

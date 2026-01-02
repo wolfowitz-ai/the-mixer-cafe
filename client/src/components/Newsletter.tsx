@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mail } from "lucide-react";
+import { Mail, Instagram } from "lucide-react";
 
 export default function Newsletter() {
   return (
@@ -17,10 +17,10 @@ export default function Newsletter() {
           Join Our Family Table
         </h2>
         <p className="text-accent-foreground/80 max-w-xl mx-auto mb-8 text-lg">
-          Sign up for our newsletter to receive updates on new menu items, special cultural events, and exclusive offers.
+          Sign up for our newsletter or follow us on social media for updates, events, and exclusive offers.
         </p>
 
-        <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
+        <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-8" onSubmit={(e) => e.preventDefault()}>
           <Input 
             type="email" 
             placeholder="Your email address" 
@@ -30,7 +30,20 @@ export default function Newsletter() {
             Subscribe
           </Button>
         </form>
-        <p className="text-xs text-accent-foreground/50 mt-4">
+
+        <div className="flex items-center justify-center gap-2">
+           <a 
+              href="https://www.instagram.com/themixercafe" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium hover:text-secondary transition-colors"
+           >
+              <Instagram size={18} />
+              Follow @themixercafe on Instagram
+           </a>
+        </div>
+
+        <p className="text-xs text-accent-foreground/50 mt-8">
           We respect your privacy. No spam, just delicious updates.
         </p>
       </div>
