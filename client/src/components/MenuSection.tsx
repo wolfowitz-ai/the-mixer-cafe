@@ -74,35 +74,35 @@ export default function MenuSection() {
         </div>
 
         <Tabs defaultValue="brazilian" className="w-full max-w-4xl mx-auto">
-          <div className="flex justify-start md:justify-center mb-10 overflow-x-auto pb-2 no-scrollbar px-2">
-            <TabsList className="bg-transparent h-auto gap-4 flex-nowrap">
+          <div className="flex justify-center mb-10 pb-2 px-2">
+            <TabsList className="bg-transparent h-auto gap-3 flex-wrap justify-center">
               <TabsTrigger 
                 value="brazilian" 
-                className="rounded-full px-6 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
+                className="rounded-full px-4 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
               >
                 Brazilian
               </TabsTrigger>
               <TabsTrigger 
                 value="turkish" 
-                className="rounded-full px-6 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
+                className="rounded-full px-4 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
               >
                 Turkish
               </TabsTrigger>
               <TabsTrigger 
                 value="french" 
-                className="rounded-full px-6 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
+                className="rounded-full px-4 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
               >
                 French
               </TabsTrigger>
               <TabsTrigger 
                 value="american" 
-                className="rounded-full px-6 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
+                className="rounded-full px-4 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
               >
                 Cafe Classics
               </TabsTrigger>
               <TabsTrigger 
                 value="beverages" 
-                className="rounded-full px-6 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
+                className="rounded-full px-4 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
               >
                 Beverages
               </TabsTrigger>
