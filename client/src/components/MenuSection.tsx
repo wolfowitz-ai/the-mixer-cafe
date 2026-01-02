@@ -150,9 +150,9 @@ export default function MenuSection() {
           </TabsContent>
         </Tabs>
 
-        <div className="text-center mt-12">
-          <p className="text-sm text-muted-foreground italic">
-            * We also offer a selection of gluten-free and vegan options. Please ask our staff.
+        <div className="text-center mt-12 max-w-3xl mx-auto">
+          <p className="text-[10px] text-muted-foreground uppercase leading-relaxed">
+            *CONSUMING RAW OR UNDERCOOKED MEATS, POULTRY, SEAFOOD, SHELLFISH, OR EGGS MAY INCREASE YOUR RISK OF FOODBORNE ILLNESS, ESPECIALLY IF YOU HAVE CERTAIN MEDICAL CONDITIONS.
           </p>
         </div>
       </div>

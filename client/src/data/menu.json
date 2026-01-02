@@ -16,14 +16,14 @@
   "french": [
     { "name": "Bacon, Egg & Cheese", "description": "Croissant, bacon, egg and cheese.", "price": "$12.30", "popular": true },
     { "name": "Croissant Tartine", "description": "One egg, bacon, Swiss cheese, croissant, jam, butter and black coffee.", "price": "$13.90", "popular": false },
-    { "name": "Dear Benedict", "description": "Two poached eggs, croissant, Hollandaise sauce, Canadian bacon and tomato.", "price": "$15.90", "popular": true },
+    { "name": "Dear Benedict*", "description": "Two poached eggs, croissant, Hollandaise sauce, Canadian bacon and tomato.", "price": "$15.90", "popular": true },
     { "name": "Grand Luxe", "description": "Roasted Coffee, croissant, toast, bacon, two eggs, jam, butter and orange juice.", "price": "$14.50", "popular": false },
     { "name": "Gourmet Crêpe", "description": "Nutella.", "price": "$7.95", "popular": false },
     { "name": "Double Crêpe", "description": "Nutella and banana.", "price": "$8.95", "popular": false },
     { "name": "Triple Crêpe", "description": "Nutella, banana and strawberry.", "price": "$10.95", "popular": true }
   ],
   "american": [
-    { "name": "Lox Bagel", "description": "Cream Cheese, tomato, onion and capers.", "price": "$10.95", "popular": true },
+    { "name": "Lox Bagel*", "description": "Cream Cheese, tomato, onion and capers.", "price": "$10.95", "popular": true },
     { "name": "Egg & Cream Cheese Bagel", "description": "Plain, Everything or Sesame bagel.", "price": "$8.95", "popular": false },
     { "name": "Smoked Salmon Bagel", "description": "Cream Cheese, tomato, onion and capers.", "price": "$11.95", "popular": false },
     { "name": "Ham & Cheese Sandwich", "description": "Croissant, Swiss cheese, tomato and arugula.", "price": "$9.95", "popular": false },
