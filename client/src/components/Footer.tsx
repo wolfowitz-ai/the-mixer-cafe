@@ -18,10 +18,10 @@ export default function Footer() {
                 href="https://www.instagram.com/themixercafe" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:shadow-[0_0_15px_rgba(225,48,108,0.5)] transition-all group"
                 aria-label="Follow us on Instagram"
               >
-                <Instagram size={20} />
+                <Instagram size={20} className="text-[#E1306C] group-hover:scale-110 transition-transform" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-colors">
                 <Facebook size={20} />

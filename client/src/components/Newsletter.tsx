@@ -31,15 +31,19 @@ export default function Newsletter() {
           </Button>
         </form>
 
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-2 mt-8">
            <a 
               href="https://www.instagram.com/themixercafe" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium hover:text-secondary transition-colors"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-[#E1306C] font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group border border-[#E1306C]/20"
            >
-              <Instagram size={18} />
-              Follow @themixercafe on Instagram
+              <div className="bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] p-1.5 rounded-full text-white group-hover:rotate-12 transition-transform duration-300">
+                <Instagram size={20} className="stroke-white" />
+              </div>
+              <span className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent bg-[length:200%_auto] hover:bg-[position:right_center] transition-[background-position] duration-500">
+                Follow @themixercafe
+              </span>
            </a>
         </div>
 

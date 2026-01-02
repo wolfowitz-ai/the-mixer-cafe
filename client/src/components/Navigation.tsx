@@ -71,12 +71,12 @@ export default function Navigation() {
             rel="noopener noreferrer"
             className={`transition-colors font-medium hover:scale-110 transform duration-200 ${
               isScrolled 
-                ? "text-foreground/80 hover:text-primary" 
+                ? "text-[#E1306C] hover:text-[#C13584]" 
                 : "text-white/90 hover:text-white"
             }`}
             aria-label="Follow us on Instagram"
           >
-            <Instagram size={22} />
+            <Instagram size={22} className={isScrolled ? "" : "text-[#E1306C] md:text-white"} />
           </a>
 
           <Button 
@@ -129,10 +129,10 @@ export default function Navigation() {
             href="https://www.instagram.com/themixercafe"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg font-medium text-foreground py-2 flex items-center gap-2"
+            className="text-lg font-medium text-foreground py-2 flex items-center gap-2 group"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <Instagram size={20} />
+            <Instagram size={20} className="text-[#E1306C] group-hover:scale-110 transition-transform" />
             Follow us on Instagram
           </a>
 
