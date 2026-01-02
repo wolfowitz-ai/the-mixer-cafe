@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import MenuSection from "@/components/MenuSection";
 import AboutSection from "@/components/AboutSection";
-import Newsletter from "@/components/Newsletter";
+import InstagramFeed from "@/components/InstagramFeed";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
         <Hero />
         <AboutSection />
         <MenuSection />
-        <Newsletter />
+        <InstagramFeed />
       </main>
       <Footer />
     </div>
