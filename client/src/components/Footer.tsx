@@ -23,7 +23,13 @@ export default function Footer() {
               >
                 <Instagram size={20} className="text-[#E1306C] group-hover:scale-110 transition-transform" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-colors">
+              <a 
+                href="https://www.facebook.com/TheMixerCafe" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-colors"
+                aria-label="Follow us on Facebook"
+              >
                 <Facebook size={20} />
               </a>
             </div>
