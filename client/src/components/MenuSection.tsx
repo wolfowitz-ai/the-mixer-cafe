@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { AlertCircle } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import menuData from "../data/menu.json";
 
 // Type definition for Menu Item
@@ -10,6 +12,7 @@ type MenuItem = {
   description: string;
   price: string;
   popular: boolean;
+  checkAvailability?: boolean;
 };
 
 // Type definition for Menu Data
@@ -18,15 +21,16 @@ type MenuData = {
   turkish: MenuItem[];
   french: MenuItem[];
   american: Record<string, MenuItem[]>;
+  desserts: Record<string, MenuItem[]>;
   beverages: MenuItem[];
 };
 
 const menuItems: MenuData = menuData as unknown as MenuData;
 
 const MenuItem = ({ item }: { item: MenuItem }) => (
-  <Card className="border-none shadow-none bg-white/50 hover:bg-white transition-colors duration-300 group">
+  <Card className="border-none shadow-none bg-white/50 hover:bg-white transition-colors duration-300 group h-full">
     <CardHeader className="flex flex-row items-baseline justify-between p-4 pb-2">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 flex-wrap">
         <CardTitle className="text-lg font-serif text-primary group-hover:text-accent transition-colors">
           {item.name}
         </CardTitle>
@@ -35,8 +39,23 @@ const MenuItem = ({ item }: { item: MenuItem }) => (
             Favorite
           </Badge>
         )}
+        {item.checkAvailability && (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Badge variant="outline" className="text-[10px] h-5 px-1.5 border-orange-400 text-orange-600 bg-orange-50 hover:bg-orange-100 cursor-help flex items-center gap-1">
+                  <AlertCircle className="w-3 h-3" />
+                  Check Availability
+                </Badge>
+              </TooltipTrigger>
+              <TooltipContent className="bg-primary text-primary-foreground border-none">
+                <p>Please contact the store for availability.</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        )}
       </div>
-      <span className="font-bold text-accent">{item.price}</span>
+      <span className="font-bold text-accent whitespace-nowrap ml-2">{item.price}</span>
     </CardHeader>
     <CardContent className="p-4 pt-0">
       <CardDescription className="text-muted-foreground leading-relaxed">
@@ -61,6 +80,24 @@ export default function MenuSection() {
       }
     }, 0);
   };
+
+  const renderCategoryWithSubsections = (categoryItems: Record<string, MenuItem[]>) => (
+    <div className="space-y-10">
+      {Object.entries(categoryItems).map(([category, items]) => (
+        <div key={category}>
+          <div className="flex items-center gap-4 mb-6">
+            <h3 className="text-2xl font-serif font-bold text-primary">{category}</h3>
+            <div className="h-px bg-border flex-1" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {items.map((item, idx) => (
+              <MenuItem key={idx} item={item} />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <section id="menu" className="py-20 bg-background relative overflow-hidden scroll-mt-24">
@@ -111,6 +148,12 @@ export default function MenuSection() {
                 Cafe Classics
               </TabsTrigger>
               <TabsTrigger 
+                value="desserts" 
+                className="rounded-full px-4 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
+              >
+                Desserts
+              </TabsTrigger>
+              <TabsTrigger 
                 value="beverages" 
                 className="rounded-full px-4 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
               >
@@ -144,21 +187,11 @@ export default function MenuSection() {
           </TabsContent>
 
           <TabsContent value="american" className="mt-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
-             <div className="space-y-10">
-              {Object.entries(menuItems.american).map(([category, items]) => (
-                <div key={category}>
-                  <div className="flex items-center gap-4 mb-6">
-                    <h3 className="text-2xl font-serif font-bold text-primary">{category}</h3>
-                    <div className="h-px bg-border flex-1" />
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {items.map((item, idx) => (
-                      <MenuItem key={idx} item={item} />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+             {renderCategoryWithSubsections(menuItems.american)}
+          </TabsContent>
+
+          <TabsContent value="desserts" className="mt-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
+             {renderCategoryWithSubsections(menuItems.desserts)}
           </TabsContent>
 
           <TabsContent value="beverages" className="mt-0 animate-in fade-in slide-in-from-bottom-5 duration-500">

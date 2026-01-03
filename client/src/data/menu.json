@@ -1,18 +1,30 @@
 {
   "brazilian": [
     { "name": "Queijo Quente", "description": "Bread and melted cheese.", "price": "$6.50", "popular": false },
-    { "name": "Misto Quente", "description": "Bread, melted cheese, tomato, ham.", "price": "$7.95", "popular": true }
+    { "name": "Misto Quente", "description": "Bread, melted cheese, tomato, ham.", "price": "$7.95", "popular": true },
+    { "name": "Coxinha", "description": "Traditional chicken croquette.", "price": "$4.00", "popular": true },
+    { "name": "Pão de Queijo (3 units)", "description": "Traditional cheese bread.", "price": "$1.95", "popular": true },
+    { "name": "Espirra", "description": "Baked dough filled with seasoned meat.", "price": "$4.00", "popular": false },
+    { "name": "Empanada", "description": "Baked pastry turnover filled with savory ingredients.", "price": "$4.00", "popular": false }
   ],
   "turkish": [
     { "name": "Turkish Bagel", "description": "Cheese, tomatoes and green peppers.", "price": "$7.30", "popular": false },
     { "name": "Menemen", "description": "Turkish-style scrambled eggs cooked with tomatoes, peppers, spices. Choice of melted cheese.", "price": "$12.90", "popular": true },
-    { "name": "Turkish Platter", "description": "Two eggs, tomato salad with olives, honey and butter, cheese, Turkish bagel, Nutella and jelly.", "price": "$15.90", "popular": true }
+    { "name": "Turkish Platter", "description": "Two eggs, tomato salad with olives, honey and butter, cheese, Turkish bagel, Nutella and jelly.", "price": "$15.90", "popular": true },
+    { "name": "Poaca", "description": "Traditional Turkish pastry.", "price": "$3.00", "popular": false },
+    { "name": "Spinach Feta Börek", "description": "Savory pastry with spinach and feta cheese.", "price": "$4.45", "popular": true, "checkAvailability": true },
+    { "name": "Potato Beef Börek", "description": "Savory pastry with potato and beef.", "price": "$4.00", "popular": false },
+    { "name": "Feta Cheese & Parsley Börek", "description": "Savory pastry with feta cheese and parsley.", "price": "$4.00", "popular": false }
   ],
   "french": [
     { "name": "Bacon, Egg & Cheese", "description": "Croissant, bacon, egg and cheese.", "price": "$12.30", "popular": true },
     { "name": "Croissant Tartine", "description": "One egg, bacon, Swiss cheese, croissant, jam, butter and black coffee.", "price": "$13.90", "popular": false },
     { "name": "Dear Benedict*", "description": "Two poached eggs, croissant, Hollandaise sauce, Canadian bacon.", "price": "$15.90", "popular": true },
-    { "name": "Grand Luxe", "description": "Roasted Coffee, croissant, toast, bacon, two eggs, jam, butter and orange juice.", "price": "$14.50", "popular": false }
+    { "name": "Grand Luxe", "description": "Roasted Coffee, croissant, toast, bacon, two eggs, jam, butter and orange juice.", "price": "$14.50", "popular": false },
+    { "name": "Butter Croissant", "description": "Classic flaky french pastry.", "price": "$3.75", "popular": true },
+    { "name": "Chocolate Croissant", "description": "Croissant filled with chocolate.", "price": "$4.25", "popular": true },
+    { "name": "Almond Croissant", "description": "Croissant filled with almond cream.", "price": "$5.25", "popular": false },
+    { "name": "Apple Turnover", "description": "Puff pastry filled with apple.", "price": "$4.75", "popular": false }
   ],
   "american": {
     "Sandwiches": [
@@ -41,6 +53,19 @@
       { "name": "French", "description": "Cheese and green onions. Served with jelly and butter.", "price": "$8.90", "popular": false },
       { "name": "Brazilian", "description": "Cheese, ham, tomatoes and green onions. Served with jelly and butter.", "price": "$13.50", "popular": true },
       { "name": "Florentine", "description": "Cheese, spinach, mushrooms, tomatoes. Served with jelly and butter.", "price": "$14.50", "popular": false }
+    ]
+  },
+  "desserts": {
+    "Cakes": [
+      { "name": "Carrot Cake", "description": "Slice.", "price": "$4.00", "popular": false },
+      { "name": "Orange Cake", "description": "Slice.", "price": "$4.00", "popular": false },
+      { "name": "Corn Cake", "description": "Slice.", "price": "$4.00", "popular": false }
+    ],
+    "Cookies & Sweets": [
+      { "name": "Cookie", "description": "Freshly baked cookie.", "price": "$1.25", "popular": false },
+      { "name": "Brownie", "description": "Rich chocolate brownie.", "price": "$4.00", "popular": true },
+      { "name": "Chocolate Muffin", "description": "Moist chocolate muffin.", "price": "$2.15", "popular": false },
+      { "name": "Turkish Cookies", "description": "Traditional sweet cookies.", "price": "$2.50", "popular": false }
     ]
   },
   "beverages": [
