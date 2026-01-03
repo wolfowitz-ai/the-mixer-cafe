@@ -41,10 +41,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start justify-center md:justify-start gap-3 text-primary-foreground/80">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-1" />
-                <span>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=312+N+Federal+Hwy+Boynton+Beach+FL+33435" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-secondary transition-colors"
+                >
                   312 N Federal Hwy<br />
                   Boynton Beach, FL 33435
-                </span>
+                </a>
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3 text-primary-foreground/80">
                 <Phone className="w-5 h-5 text-secondary shrink-0" />

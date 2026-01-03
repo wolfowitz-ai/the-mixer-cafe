@@ -11,7 +11,7 @@
     { "name": "Turkish Bagel", "description": "Cheese, tomatoes and green peppers.", "price": "$7.30", "popular": false },
     { "name": "Menemen", "description": "Turkish-style scrambled eggs cooked with tomatoes, peppers, spices. Choice of melted cheese.", "price": "$12.90", "popular": true },
     { "name": "Turkish Platter", "description": "Two eggs, tomato salad with olives, honey and butter, cheese, Turkish bagel, Nutella and jelly.", "price": "$15.90", "popular": true },
-    { "name": "Poaca", "description": "Traditional Turkish pastry.", "price": "$3.00", "popular": false },
+    { "name": "Poğaça", "description": "Traditional Turkish pastry.", "price": "$3.00", "popular": false },
     { "name": "Spinach Feta Börek", "description": "Savory pastry with spinach and feta cheese.", "price": "$4.45", "popular": true, "checkAvailability": true },
     { "name": "Potato Beef Börek", "description": "Savory pastry with potato and beef.", "price": "$4.00", "popular": false },
     { "name": "Feta Cheese & Parsley Börek", "description": "Savory pastry with feta cheese and parsley.", "price": "$4.00", "popular": false }
