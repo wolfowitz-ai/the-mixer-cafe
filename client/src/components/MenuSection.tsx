@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AlertCircle } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import menuData from "../data/menu.json";
 
 // Type definition for Menu Item
@@ -40,19 +40,17 @@ const MenuItem = ({ item }: { item: MenuItem }) => (
           </Badge>
         )}
         {item.checkAvailability && (
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Badge variant="outline" className="text-[10px] h-5 px-1.5 border-orange-400 text-orange-600 bg-orange-50 hover:bg-orange-100 cursor-help flex items-center gap-1">
-                  <AlertCircle className="w-3 h-3" />
-                  Check Availability
-                </Badge>
-              </TooltipTrigger>
-              <TooltipContent className="bg-primary text-primary-foreground border-none">
-                <p>Please contact the store for availability.</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <Popover>
+            <PopoverTrigger asChild>
+              <Badge variant="outline" className="text-[10px] h-5 px-1.5 border-orange-400 text-orange-600 bg-orange-50 hover:bg-orange-100 cursor-help flex items-center gap-1">
+                <AlertCircle className="w-3 h-3" />
+                Check Availability
+              </Badge>
+            </PopoverTrigger>
+            <PopoverContent className="bg-primary text-primary-foreground border-none w-auto p-2 text-sm">
+              <p>Please contact the store for availability.</p>
+            </PopoverContent>
+          </Popover>
         )}
       </div>
       <span className="font-bold text-accent whitespace-nowrap ml-2">{item.price}</span>
