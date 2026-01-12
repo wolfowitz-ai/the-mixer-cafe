@@ -16,15 +16,23 @@ export default function OrderOnlineDialog({ children }: OrderOnlineDialogProps) 
         <DialogHeader>
           <DialogTitle className="text-center text-2xl font-serif text-primary">Order Online</DialogTitle>
         </DialogHeader>
-        <div className="flex flex-col items-center gap-6 py-4">
-          <img 
-            src={qrCodeImage} 
-            alt="QR Code for online ordering" 
-            className="w-64 h-64 object-contain"
-          />
-          <p className="text-center text-muted-foreground">
-            Scan the QR code above or click the link below
+        <div className="flex flex-col items-center gap-4 py-4">
+          <div className="w-56 h-56 overflow-hidden">
+            <img 
+              src={qrCodeImage} 
+              alt="QR Code for online ordering" 
+              className="w-56 object-cover object-top"
+              style={{ height: '220px' }}
+            />
+          </div>
+          <p className="text-center text-primary font-semibold text-lg">
+            Scan to Place an Online Order
           </p>
+          <div className="flex items-center gap-3 text-muted-foreground text-sm">
+            <span className="h-px w-12 bg-border"></span>
+            <span>or</span>
+            <span className="h-px w-12 bg-border"></span>
+          </div>
           <a 
             href="https://www.clover.com/online-ordering/the-mixer-cafe-boynton-beach" 
             target="_blank" 
