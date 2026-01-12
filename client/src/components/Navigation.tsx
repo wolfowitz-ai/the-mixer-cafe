@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { Menu, X, ShoppingBag, Instagram } from "lucide-react";
+import OrderOnlineDialog from "./OrderOnlineDialog";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,17 +80,18 @@ export default function Navigation() {
             <Instagram size={22} className={isScrolled ? "" : "text-[#E1306C] md:text-white"} />
           </a>
 
-          <Button 
-            className={`font-semibold px-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 ${
-              isScrolled
-                ? "bg-primary hover:bg-primary/90 text-primary-foreground"
-                : "bg-white hover:bg-white/90 text-primary"
-            }`}
-            onClick={() => window.open('https://www.clover.com/online-ordering/the-mixer-cafe-boynton-beach', '_blank')}
-          >
-            <ShoppingBag className="w-4 h-4 mr-2" />
-            Order Online
-          </Button>
+          <OrderOnlineDialog>
+            <Button 
+              className={`font-semibold px-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 ${
+                isScrolled
+                  ? "bg-primary hover:bg-primary/90 text-primary-foreground"
+                  : "bg-white hover:bg-white/90 text-primary"
+              }`}
+            >
+              <ShoppingBag className="w-4 h-4 mr-2" />
+              Order Online
+            </Button>
+          </OrderOnlineDialog>
         </div>
 
         {/* Mobile Toggle */}
@@ -137,12 +139,13 @@ export default function Navigation() {
             Follow us on Instagram
           </a>
 
-          <Button 
-            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-            onClick={() => window.open('https://www.clover.com/online-ordering/the-mixer-cafe-boynton-beach', '_blank')}
-          >
-            Order Online
-          </Button>
+          <OrderOnlineDialog>
+            <Button 
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              Order Online
+            </Button>
+          </OrderOnlineDialog>
         </div>
       )}
     </nav>

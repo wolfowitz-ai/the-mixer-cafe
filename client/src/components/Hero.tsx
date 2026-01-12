@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@assets/generated_images/cultural_fusion_cafe_table_spread_with_pastries_and_coffee.png";
+import OrderOnlineDialog from "./OrderOnlineDialog";
 
 export default function Hero() {
   return (
@@ -30,13 +31,14 @@ export default function Hero() {
             A culinary journey curated by two mothers, made with love for our community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
-            <Button 
-              size="lg" 
-              className="w-full sm:w-auto bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold px-8 h-12 rounded-full text-lg shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] transition-all transform hover:-translate-y-1"
-              onClick={() => window.open('https://www.clover.com/online-ordering/the-mixer-cafe-boynton-beach', '_blank')}
-            >
-              Order Online
-            </Button>
+            <OrderOnlineDialog>
+              <Button 
+                size="lg" 
+                className="w-full sm:w-auto bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold px-8 h-12 rounded-full text-lg shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] transition-all transform hover:-translate-y-1"
+              >
+                Order Online
+              </Button>
+            </OrderOnlineDialog>
             <Button 
               variant="outline" 
               size="lg" 
