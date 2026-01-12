@@ -23,6 +23,7 @@ type MenuData = {
   american: Record<string, MenuItem[]>;
   desserts: Record<string, MenuItem[]>;
   beverages: Record<string, MenuItem[]>;
+  smoothies: Record<string, MenuItem[]>;
 };
 
 const menuItems: MenuData = menuData as unknown as MenuData;
@@ -157,6 +158,12 @@ export default function MenuSection() {
               >
                 Beverages
               </TabsTrigger>
+              <TabsTrigger 
+                value="smoothies" 
+                className="rounded-full px-4 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-transparent data-[state=active]:shadow-lg transition-all"
+              >
+                Smoothies
+              </TabsTrigger>
             </TabsList>
           </div>
 
@@ -194,6 +201,10 @@ export default function MenuSection() {
 
           <TabsContent value="beverages" className="mt-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
              {renderCategoryWithSubsections(menuItems.beverages)}
+          </TabsContent>
+
+          <TabsContent value="smoothies" className="mt-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
+             {renderCategoryWithSubsections(menuItems.smoothies)}
           </TabsContent>
         </Tabs>
 

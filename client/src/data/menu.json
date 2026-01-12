@@ -1,41 +1,50 @@
 {
   "brazilian": [
     { "name": "Queijo Quente", "description": "Bread and melted cheese.", "price": "$6.50", "popular": false },
-    { "name": "Misto Quente", "description": "Bread, melted cheese, tomato, ham.", "price": "$7.95", "popular": true },
+    { "name": "Misto Quente", "description": "Bread, melted cheese, tomato, ham.", "price": "$7.50", "popular": true },
     { "name": "Coxinha", "description": "Traditional chicken croquette.", "price": "$4.00", "popular": true, "checkAvailability": true },
-    { "name": "Pão de Queijo (3 units)", "description": "Traditional cheese bread.", "price": "$1.95", "popular": true },
+    { "name": "Pão de Queijo", "description": "Traditional cheese bread.", "price": "$1.95", "popular": true },
+    { "name": "Grande Pão de Queijo", "description": "Large traditional cheese bread.", "price": "$2.50", "popular": false },
     { "name": "Espirra", "description": "Baked dough filled with seasoned meat.", "price": "$4.00", "popular": false, "checkAvailability": true },
     { "name": "Empanada", "description": "Baked pastry turnover filled with savory ingredients.", "price": "$4.00", "popular": false }
   ],
   "turkish": [
     { "name": "Turkish Bagel", "description": "Cheese, tomatoes and green peppers.", "price": "$7.30", "popular": false },
     { "name": "Menemen", "description": "Turkish-style scrambled eggs cooked with tomatoes, peppers, spices. Choice of melted cheese.", "price": "$12.90", "popular": true },
-    { "name": "Turkish Platter", "description": "Two eggs, tomato salad with olives, honey and butter, cheese, Turkish bagel, Nutella and jelly.", "price": "$15.90", "popular": true },
-    { "name": "Spinach Feta Börek", "description": "Savory pastry with spinach and feta cheese.", "price": "$4.45", "popular": true, "checkAvailability": true },
-    { "name": "Potato Beef Börek", "description": "Savory pastry with potato and beef.", "price": "$4.00", "popular": false },
+    { "name": "Turkish Platter", "description": "Two eggs, tomato salad with olives, honey, butter, cheese, Turkish bagel, Nutella and jelly.", "price": "$15.90", "popular": true },
+    { "name": "Spinach Feta Börek", "description": "Savory pastry with spinach and feta cheese.", "price": "$4.00", "popular": true, "checkAvailability": true },
+    { "name": "Potato Beef Börek", "description": "Savory pastry with potato and beef.", "price": "$4.45", "popular": false },
     { "name": "Feta Cheese & Parsley Börek", "description": "Savory pastry with feta cheese and parsley.", "price": "$4.00", "popular": false, "checkAvailability": true }
   ],
   "french": [
     { "name": "Bacon, Egg & Cheese", "description": "Croissant, bacon, egg and cheese.", "price": "$12.30", "popular": true },
     { "name": "Croissant Tartine", "description": "One egg, bacon, Swiss cheese, croissant, jam, butter and black coffee.", "price": "$13.90", "popular": false },
-    { "name": "Dear Benedict*", "description": "Two poached eggs, croissant, Hollandaise sauce, Canadian bacon.", "price": "$15.90", "popular": true },
-    { "name": "Grand Luxe", "description": "Roasted Coffee, croissant, toast, bacon, two eggs, jam, butter and orange juice.", "price": "$14.50", "popular": false },
+    { "name": "Dear Benedict*", "description": "Two poached eggs, croissant, Hollandaise sauce, Canadian bacon and tomato.", "price": "$15.90", "popular": true },
+    { "name": "Grand Luxe", "description": "Roasted coffee, croissant, toast, bacon, two eggs, jam, butter and orange juice.", "price": "$14.50", "popular": false },
     { "name": "Butter Croissant", "description": "Classic flaky french pastry.", "price": "$3.75", "popular": true },
     { "name": "Chocolate Croissant", "description": "Croissant filled with chocolate.", "price": "$4.25", "popular": true },
     { "name": "Almond Croissant", "description": "Croissant filled with almond cream.", "price": "$5.25", "popular": false },
-    { "name": "Apple Turnover", "description": "Puff pastry filled with apple.", "price": "$4.75", "popular": false }
+    { "name": "Apple Turnover", "description": "Puff pastry filled with apple.", "price": "$4.75", "popular": false },
+    { "name": "Spinach Feta Pastry", "description": "Flaky pastry with spinach and feta.", "price": "$5.75", "popular": false }
   ],
   "american": {
     "Sandwiches": [
-      { "name": "Ham & Cheese", "description": "Ham, tomato, cheese, mayo, arugula multigrain bread.", "price": "$9.95", "popular": false },
+      { "name": "Ham & Cheese", "description": "Croissant, Swiss cheese, tomato and arugula.", "price": "$9.95", "popular": false },
       { "name": "Caprese", "description": "Multigrain bread, pesto, fresh mozzarella, tomatoes, arugula and balsamic glaze.", "price": "$11.45", "popular": false },
-      { "name": "Turkey", "description": "Turkey breast, multigrain bread, olives paste, pesto, mozzarella or swiss cheese, tomato, arugula and balsamic glaze.", "price": "$14.95", "popular": true },
+      { "name": "Turkey", "description": "Turkey breast, multigrain bread, black olives paste, pesto, mozzarella or Swiss cheese, tomato, arugula and balsamic glaze.", "price": "$14.95", "popular": true },
       { "name": "Chicken Salad", "description": "Multigrain bread, mayo, tomatoes, arugula.", "price": "$12.90", "popular": false, "checkAvailability": true }
     ],
     "Bagel Sandwiches": [
       { "name": "Cream Cheese", "description": "Plain, Everything or Sesame.", "price": "$4.95", "popular": false },
       { "name": "Bacon Egg & Cheese", "description": "Plain, Everything or Sesame.", "price": "$11.95", "popular": true },
-      { "name": "Smoked Salmon*", "description": "Cream Cheese, tomato, onion and capers. Plain, Everything or Sesame.", "price": "$12.95", "popular": true }
+      { "name": "Smoked Salmon*", "description": "Cream cheese, tomato, onion and capers. Plain, Everything or Sesame.", "price": "$12.95", "popular": true }
+    ],
+    "Omelettes": [
+      { "name": "Cheese", "description": "White/Wheat/Keto bread (+$0.50). Served with jelly and butter.", "price": "$9.95", "popular": false },
+      { "name": "Mushroom & Cheese", "description": "White/Wheat/Keto bread (+$0.50). Served with jelly and butter.", "price": "$10.95", "popular": false },
+      { "name": "Bacon & Cheese", "description": "White/Wheat/Keto bread (+$0.50). Served with jelly and butter.", "price": "$13.95", "popular": false },
+      { "name": "Brazilian", "description": "Cheese, ham, tomato and green onions. White/Wheat/Keto bread (+$0.50). Served with jelly and butter.", "price": "$13.95", "popular": true },
+      { "name": "Florentine", "description": "Cheese, spinach, mushrooms and tomatoes. White/Wheat/Keto bread (+$0.50). Served with jelly and butter.", "price": "$14.50", "popular": false }
     ],
     "Waffles": [
       { "name": "Gourmet", "description": "Nutella.", "price": "$7.95", "popular": false },
@@ -45,13 +54,8 @@
     "Pancakes": [
       { "name": "Plain", "description": "Served as two pieces.", "price": "$5.95", "popular": false },
       { "name": "Blueberries", "description": "Served as two pieces.", "price": "$8.95", "popular": false },
-      { "name": "Banana", "description": "Served as two pieces.", "price": "$8.95", "popular": false },
-      { "name": "Banana Nutella", "description": "Served as two pieces.", "price": "$9.95", "popular": true }
-    ],
-    "Omelettes": [
-      { "name": "French", "description": "Cheese and green onions. Served with jelly and butter.", "price": "$8.90", "popular": false },
-      { "name": "Brazilian", "description": "Cheese, ham, tomatoes and green onions. Served with jelly and butter.", "price": "$13.50", "popular": true },
-      { "name": "Florentine", "description": "Cheese, spinach, mushrooms, tomatoes. Served with jelly and butter.", "price": "$14.50", "popular": false }
+      { "name": "Nutela", "description": "Served as two pieces.", "price": "$8.95", "popular": false },
+      { "name": "Banana & Nutela", "description": "Served as two pieces.", "price": "$9.95", "popular": true }
     ]
   },
   "desserts": {
@@ -61,40 +65,58 @@
       { "name": "Corn Cake", "description": "Slice.", "price": "$4.00", "popular": false, "checkAvailability": true }
     ],
     "Cookies & Sweets": [
-      { "name": "Cookie", "description": "Freshly baked cookie.", "price": "$1.25", "popular": false },
+      { "name": "Cookie", "description": "Freshly baked cookie.", "price": "$1.75", "popular": false },
       { "name": "Brownie", "description": "Rich chocolate brownie with dripping pistachios on top.", "price": "$4.00", "popular": true }
     ],
     "Muffins": [
-      { "name": "Chocolate Muffin", "description": "Moist chocolate muffin.", "price": "$2.15", "popular": false, "checkAvailability": true },
-      { "name": "Blueberry Muffin", "description": "Classic blueberry muffin.", "price": "$2.15", "popular": false, "checkAvailability": true },
-      { "name": "Red Velvet Muffin", "description": "Red velvet muffin with cream cheese.", "price": "$2.15", "popular": false, "checkAvailability": true }
+      { "name": "Chocolate Muffin", "description": "Moist chocolate muffin.", "price": "$3.25", "popular": false, "checkAvailability": true },
+      { "name": "Blueberry Muffin", "description": "Classic blueberry muffin.", "price": "$3.25", "popular": false, "checkAvailability": true },
+      { "name": "Red Velvet Muffin", "description": "Red velvet muffin with cream cheese.", "price": "$3.25", "popular": false, "checkAvailability": true }
     ]
   },
   "beverages": {
-    "Hot Drinks": [
+    "Hot Coffee": [
       { "name": "Roasted Coffee", "description": "", "price": "$2.95", "popular": false },
       { "name": "Espresso", "description": "", "price": "$3.25", "popular": false },
       { "name": "Americano", "description": "", "price": "$3.95", "popular": false },
       { "name": "Macchiato", "description": "", "price": "$3.95", "popular": false },
+      { "name": "Turkish Coffee", "description": "", "price": "$3.99", "popular": false },
       { "name": "Cappuccino", "description": "", "price": "$4.75", "popular": true },
       { "name": "Latte", "description": "", "price": "$4.95", "popular": true },
-      { "name": "Mocha", "description": "", "price": "$5.45", "popular": false },
-      { "name": "Tea Selection", "description": "", "price": "$3.95", "popular": false },
-      { "name": "Chai Latte", "description": "", "price": "$5.25", "popular": true },
-      { "name": "Matcha Latte", "description": "", "price": "$5.95", "popular": false },
-      { "name": "Hot Chocolate", "description": "Dark Chocolate", "price": "$5.25", "popular": false }
+      { "name": "Mocha", "description": "", "price": "$5.45", "popular": false }
     ],
-    "Cold Drinks": [
+    "Cold Coffee": [
       { "name": "Iced Coffee", "description": "", "price": "$3.95", "popular": false },
       { "name": "Iced Americano", "description": "", "price": "$4.95", "popular": false },
       { "name": "Iced Latte", "description": "", "price": "$5.25", "popular": true },
       { "name": "Iced Matcha Latte", "description": "", "price": "$5.95", "popular": false },
       { "name": "Iced Mocha", "description": "Dark/White/Caramel", "price": "$5.75", "popular": false }
     ],
+    "Hot Drinks": [
+      { "name": "Tea Selection", "description": "", "price": "$3.95", "popular": false },
+      { "name": "Turkish Tea", "description": "", "price": "$1.99", "popular": false },
+      { "name": "Chai Latte", "description": "", "price": "$5.25", "popular": true },
+      { "name": "Matcha Latte", "description": "", "price": "$5.95", "popular": false },
+      { "name": "Hot Chocolate", "description": "Dark/White", "price": "$5.25", "popular": false }
+    ],
     "Add-ons": [
       { "name": "Extra Shot", "description": "", "price": "$1.25", "popular": false },
-      { "name": "Monin Syrup", "description": "", "price": "$0.45", "popular": false },
+      { "name": "Monin Syrup", "description": "", "price": "$0.75", "popular": false },
       { "name": "Alternative Milk", "description": "", "price": "$0.75", "popular": false }
+    ]
+  },
+  "smoothies": {
+    "Smoothies": [
+      { "name": "Sunrise Tropic", "description": "Strawberry, mango, banana, pineapple. Regular milk or yogurt.", "price": "$7.99", "popular": true },
+      { "name": "Mango Madness", "description": "Mango and pineapple. Regular milk or yogurt.", "price": "$7.99", "popular": false },
+      { "name": "Berry Blast", "description": "Strawberry, blueberry, banana, blackberry. Regular milk or yogurt.", "price": "$7.99", "popular": true },
+      { "name": "Strawberry Banana", "description": "Strawberry and banana. Regular milk or yogurt.", "price": "$7.99", "popular": false }
+    ],
+    "Smoothie Add-ons": [
+      { "name": "Vegan Milk", "description": "Almond or Oat", "price": "$1.00", "popular": false },
+      { "name": "Protein", "description": "", "price": "$1.50", "popular": false },
+      { "name": "Collagen", "description": "", "price": "$2.00", "popular": false },
+      { "name": "Honey", "description": "", "price": "$0.50", "popular": false }
     ]
   }
 }
