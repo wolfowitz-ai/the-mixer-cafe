@@ -101,7 +101,7 @@
     ],
     "Add-ons": [
       { "name": "Extra Shot", "description": "", "price": "$1.25", "popular": false },
-      { "name": "Monin Syrup", "description": "", "price": "$0.75", "popular": false },
+      { "name": "Monin Syrup", "description": "", "price": "$0.45", "popular": false },
       { "name": "Alternative Milk", "description": "", "price": "$0.75", "popular": false }
     ]
   },
