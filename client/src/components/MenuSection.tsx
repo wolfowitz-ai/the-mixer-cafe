@@ -22,7 +22,7 @@ type MenuData = {
   french: MenuItem[];
   american: Record<string, MenuItem[]>;
   desserts: Record<string, MenuItem[]>;
-  beverages: MenuItem[];
+  beverages: Record<string, MenuItem[]>;
 };
 
 const menuItems: MenuData = menuData as unknown as MenuData;
@@ -193,11 +193,7 @@ export default function MenuSection() {
           </TabsContent>
 
           <TabsContent value="beverages" className="mt-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {menuItems.beverages.map((item, idx) => (
-                <MenuItem key={idx} item={item} />
-              ))}
-            </div>
+             {renderCategoryWithSubsections(menuItems.beverages)}
           </TabsContent>
         </Tabs>
 
