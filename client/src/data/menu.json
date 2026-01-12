@@ -97,7 +97,7 @@
       { "name": "Turkish Tea", "description": "", "price": "$1.99", "popular": false },
       { "name": "Chai Latte", "description": "", "price": "$5.25", "popular": true },
       { "name": "Matcha Latte", "description": "", "price": "$5.95", "popular": false },
-      { "name": "Hot Chocolate", "description": "Dark/White", "price": "$5.25", "popular": false }
+      { "name": "Hot Chocolate", "description": "Dark Chocolate", "price": "$5.25", "popular": false }
     ],
     "Add-ons": [
       { "name": "Extra Shot", "description": "", "price": "$1.25", "popular": false },
